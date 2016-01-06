@@ -6,5 +6,5 @@ try:
     camera.start_preview()
     time.sleep(10)
     camera.stop_preview()
-except:
+finally:
     camera.close()

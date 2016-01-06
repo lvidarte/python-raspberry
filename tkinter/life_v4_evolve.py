@@ -27,7 +27,7 @@ class Game(tk.Frame):
         self.create_events()
 
     def start(self):
-        pass
+        self.mainloop()
 
     def create_widgets(self):
         width = self.life.width * self.size

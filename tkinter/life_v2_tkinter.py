@@ -25,9 +25,8 @@ class Game(tk.Frame):
         self.cells_alive = {}
         self.create_widgets()
         self.draw_grid()
-
-    def start(self):
         self.draw_cell((1, 1))
+        self.mainloop()
 
     def create_widgets(self):
         width = self.life.width * self.size
@@ -68,6 +67,7 @@ class Game(tk.Frame):
         for _id in self.cells_alive.values():
             self.canvas.delete(_id)
         self.cells_alive = {}
+
 
 class Life:
 
@@ -130,7 +130,4 @@ class Life:
 if __name__ == '__main__':
     life = Life(width=30, height=20)
     game = Game(life, size=20)
-    game.start()
-    time.sleep(2)
-    game.clear()
 

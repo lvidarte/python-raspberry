@@ -26,6 +26,7 @@ class Game(tk.Frame):
         self.create_widgets()
         self.draw_grid()
         self.create_events()
+        self.mainloop()
 
     def start(self):
         pass
